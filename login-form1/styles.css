@@ -1,0 +1,170 @@
+/* Smooth Theme Transition */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Background & Theme */
+body {
+    font-family: Arial, sans-serif;
+    transition: background 0.3s, color 0.3s;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Background Effects */
+#starsCanvas, #dotsCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: var(--header-bg);
+    color: var(--text);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: var(--footer-bg);
+    color: var(--text);
+}
+
+/* Login Container */
+.login-container {
+    width: 350px;
+    margin: 80px auto;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.login-title {
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: var(--input-bg);
+    color: var(--text);
+    transition: all 0.3s;
+}
+
+/* Input Effects */
+.input-group input:focus {
+    transform: scale(1.05);
+    border-color: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+}
+
+/* Buttons */
+.login-btn, .clear-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn {
+    background: var(--primary);
+    color: white;
+}
+
+.clear-btn {
+    margin-top: 10px;
+    background: var(--secondary);
+    color: white;
+}
+
+.login-btn:hover {
+    background: var(--primary-hover);
+    transform: scale(1.1);
+}
+
+.clear-btn:hover {
+    background: var(--secondary-hover);
+    transform: scale(1.1);
+}
+
+.login-btn:active, .clear-btn:active {
+    transform: scale(0.9);
+}
+
+/* Dark & Light Mode Colors */
+:root {
+    --bg: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-bg: #ddd;
+    --footer-bg: #ddd;
+    --text: #1a1a1a;
+    --input-bg: #eeeeee;
+    --primary: #007bff;
+    --primary-hover: #0056b3;
+    --secondary: #ff4444;
+    --secondary-hover: #cc0000;
+}
+
+.dark-mode {
+    --bg: #1a1a1a;
+    --card-bg: #333;
+    --header-bg: #222;
+    --footer-bg: #222;
+    --text: #ffffff;
+    --input-bg: #444;
+    --primary: #ffcc00;
+    --primary-hover: #ffaa00;
+    --secondary: #ff4444;
+    --secondary-hover: #cc0000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Password visibility toggle */
+#toggle-password {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}

@@ -16,7 +16,8 @@ To see the login page in action, **run a local server** (see setup instructions 
 /project-folder  
 │── index.html          # Main login page  
 │── script.js           # JavaScript for animations & theme toggle  
-│── styles.css          # Main stylesheet  
+│── styles.css          # Main stylesheet
+│── bootstrap.min.css   # Bootstrap stylesheet
 │── header.html         # Header with theme toggle  
 │── footer.html         # Footer with additional info  
 │── README.md           # Project documentation  

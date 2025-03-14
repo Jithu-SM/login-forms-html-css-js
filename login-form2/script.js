@@ -1,9 +1,3 @@
-document.getElementById('toggle-theme').addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    const themeButton = document.getElementById('toggle-theme');
-    themeButton.textContent = document.body.classList.contains('dark') ? '🌜' : '🌞';
-});
-
 function createAnimationElements() {
     const backgroundAnimation = document.querySelector('.background-animation');
 
@@ -29,3 +23,22 @@ function createAnimationElements() {
 }
 
 createAnimationElements();
+
+// Load header and footer
+function loadHTML(file, elementId) {
+    fetch(file)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(elementId).innerHTML = data;
+            if (elementId === 'header-placeholder') {
+                document.getElementById('toggle-theme').addEventListener('click', () => {
+                    document.body.classList.toggle('dark');
+                    const themeButton = document.getElementById('toggle-theme');
+                    themeButton.textContent = document.body.classList.contains('dark') ? '🌜' : '🌞';
+                });
+            }
+        });
+}
+
+loadHTML('header.html', 'header-placeholder');
+loadHTML('footer.html', 'footer-placeholder');

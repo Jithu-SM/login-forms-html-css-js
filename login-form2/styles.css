@@ -33,6 +33,26 @@ body {
     background: var(--button-hover-bg);
 }
 
+header {
+    width: 100%;
+    padding: 10px 0;
+    background: var(--form-bg);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    width: 100%;
+    padding: 10px 0;
+    background: var(--form-bg);
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .login-form {
     background: var(--form-bg);
     padding: 20px;
